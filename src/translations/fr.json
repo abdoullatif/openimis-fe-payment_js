@@ -1,0 +1,19 @@
+{
+  "menu.payments": "Paiements",
+  "payments.page.title": "Paiements",
+  "payments.search": "Rechercher des paiements",
+  "payments.new": "Nouveau paiement",
+  "payments.overview": "Aperçu du paiement",
+  "payments.status": "Statut",
+  "payments.amount": "Montant",
+  "payments.date": "Date",
+  "payments.invoice": "Facture",
+  "payments.invoices": "Factures de paiement",
+  "paymentsInvoice.page.title": "Factures de paiement",
+  "paymentsInvoice.search": "Rechercher des factures de paiement",
+  "payments.actions": "Actions",
+  "payments.save": "Enregistrer",
+  "payments.cancel": "Annuler"
+}
+
+

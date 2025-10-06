@@ -3,6 +3,7 @@ import PaymentIcon from '@material-ui/icons/Payment';
 import { FormattedMessage } from "@openimis/fe-core";
 
 import messages_en from "./translations/en.json";
+import messages_fr from "./translations/fr.json";
 import PremiumsPaymentsOverview from "./components/PremiumsPaymentsOverview";
 import PaymentOverviewPage from "./pages/PaymentOverviewPage";
 import PaymentStatusPicker from "./pickers/PaymentStatusPicker";
@@ -21,7 +22,10 @@ const ROUTE_PAYMENTS_PAYMENT = "payment/new";
 const ROUTE_PAYMENTS_PAYMENT_OVERVIEW = "payment/overview";
 
 const DEFAULT_CONFIG = {
-  "translations": [{ key: "en", messages: messages_en }],
+  "translations": [
+    { key: "en", messages: messages_en },
+    { key: "fr", messages: messages_fr }
+  ],
   "reducers": [{ key: 'payment', reducer }],
 
   "refs": [
@@ -29,6 +33,8 @@ const DEFAULT_CONFIG = {
     { key: "payment.PaymentsTab.label", ref: PaymentsTabLabel },
     { key: "payment.PaymentsTab.panel", ref: PaymentsTabPanel },
     { key: "payment.payments", ref: ROUTE_PAYMENTS },
+    { key: "payment.paymentsInvoice", ref: ROUTE_PAYMENTS_INVOICE },
+    { key: "legalAndFinance.paymentsInvoice", ref: ROUTE_PAYMENTS_INVOICE },
     { key: "payment.paymentNew", ref: ROUTE_PAYMENTS_PAYMENT },
     { key: "payment.paymentOverview", ref: ROUTE_PAYMENTS_PAYMENT_OVERVIEW },
   ],
@@ -52,6 +58,7 @@ const DEFAULT_CONFIG = {
       text: <FormattedMessage module="payment" id="menu.payments" />,
       icon: <PaymentIcon />,
       route: "/" + ROUTE_PAYMENTS_INVOICE,
+      id: "legalAndFinance.paymentsInvoice",
       filter: rights => rights.includes(RIGHT_BILL_PAYMENT_SEARCH)
     }
   ]
