@@ -11,6 +11,7 @@ import PaymentsPage from "./pages/PaymentsPage";
 import PaymentInvoicesPage from "./pages/PaymentInvoicesPage";
 import PaymentPage from "./pages/PaymentPage";
 import { PaymentsTabLabel, PaymentsTabPanel } from "./components/PaymentsTab";
+import PaymentMainMenu from "./menus/PaymentMainMenu";
 import reducer from "./reducer";
 
 import { RIGHT_PAYMENT, RIGHT_BILL_PAYMENT_SEARCH } from "./constants";
@@ -44,6 +45,7 @@ const DEFAULT_CONFIG = {
     { path: ROUTE_PAYMENTS_PAYMENT+ "/:premium_uuid", component: PaymentPage },
     { path: ROUTE_PAYMENTS_PAYMENT_OVERVIEW + "/:payment_uuid", component: PaymentOverviewPage },
   ],
+  "core.MainMenu": [{ name: 'PaymentMainMenu', component: PaymentMainMenu }],
   "insuree.FamilyOverview.panels": [PremiumsPaymentsOverview],
   "insuree.MainMenu": [
     {
